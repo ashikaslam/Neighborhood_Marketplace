@@ -77,6 +77,15 @@ class create_sell_post(APIView):
 
 
 class RecentPost(APIView):
+
+     # admin code
+     flag = False
+     if flag == True:
+       models.Products.objects.all().delete()
+
+
+
+
      def get(self, request):
           id_value = request.GET.get('id')
           print("the id is  >>>>", id_value)
